@@ -1,4 +1,4 @@
-package com.goelrishabh.www;
+package com.goelrishabh.www.threadclass;
 
 public class Thread2 extends Thread0 {
 
