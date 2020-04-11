@@ -1,6 +1,6 @@
 package com.goelrishabh.www;
 
-public class Thread1 extends Thread {
+public class Thread1 extends Thread0 {
 
 //    static {
 //        System.out.println("static block starts!::t1");
