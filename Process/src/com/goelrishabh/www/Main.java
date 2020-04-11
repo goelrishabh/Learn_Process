@@ -11,35 +11,37 @@ public class Main {
         // write your code here
         System.out.println("*************************Main Block starts!********************************");
 
-//        //region SingleTask | MultiThreading
-//
-//        Thread0 thread0 = new Thread0("t0");
-//        thread0.start();
-//
-//        Thread0 thread01 = new Thread0("t01");
+        //region SingleTask | MultiThreading
+
+        Thread0 thread0 = new Thread0("t0");
+        thread0.setPriority(1);
+        thread0.start();
+
+        Thread0 thread01 = new Thread0("t01");
+        thread0.setPriority(2);
+        thread01.start();
+
+        /**
+         *
+         * Calling this again will cause java.lang.IllegalThreadStateException
+         * < But this will not effect the Process/sub-Process(threads) execution >
+         *     cz Each Thread/sub-process has it's own STACK Frame to execute
+         *     but have COMMON Heap & Method etc... Area assigned by JVM on start of [Process]
+         *
+         * */
 //        thread01.start();
-//
-//        /**
-//         *
-//         * Calling this again will cause java.lang.IllegalThreadStateException
-//         * < But this will not effect the Process/sub-Process(threads) execution >
-//         *     cz Each Thread/sub-process has it's own STACK Frame to execute
-//         *     but have COMMON Heap & Method etc... Area assigned by JVM on start of [Process]
-//         *
-//         * */
-//        thread01.start();
-//
-//        //endregion
+
+        //endregion
 
 
         //region MultiTask | MultiThreading
 
         Thread1 thread1 = new Thread1("t1");
-        thread1.setPriority(5);
+        thread1.setPriority(3);
         thread1.start();
 
         Thread2 thread2 = new Thread2("t2");
-        thread2.setPriority(10);
+        thread2.setPriority(4);
         thread2.start();
 
         //endregion
