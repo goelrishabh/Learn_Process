@@ -16,7 +16,7 @@ public class Thread1 extends Thread0 {
     public void run() {
         System.out.println("run block starts::t1");
         try {
-            sleep(1000);
+            sleep(401);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
