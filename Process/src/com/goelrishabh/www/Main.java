@@ -15,7 +15,12 @@ public class Main {
 
         Thread0 thread0 = new Thread0("t0");
         thread0.setPriority(1);
-        thread0.start();
+        /**
+         *
+         * < Calling Thread.run() DOESN'T creates any Thread and invokes this method on the Main Thread itself! >
+         *
+         * */
+        thread0.run();
 
         Thread0 thread01 = new Thread0("t01");
         thread0.setPriority(2);
